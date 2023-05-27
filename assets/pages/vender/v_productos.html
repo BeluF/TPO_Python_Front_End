@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Inicio | FreeMarket</title>
+        <link rel="icon" type="image/x-icon" href="/assets/media/favicon.ico" />
+        <link rel="stylesheet" href="../../css/vender/productos.css" />
+    </head>
+    <body class="container">
+        <header>
+            <nav id="navegador">
+                <ul>
+                    <li class="li-inicio">
+                        <a href="../../../index.html" class="nav-link-inicio"
+                            >FreeMarket</a
+                        >
+                        <img src="../../media/favicon.ico" alt="" />
+                    </li>
+                    <li id="li-nav-categorias">
+                        <a href="../../../index.html" class="nav-link">Categorías</a>
+                        <ul id="box-submenu-categorias">
+                            <li
+                                class="li-categoria"
+                                onclick="filtrar('productos')"
+                            >
+                                -> Productos
+                            </li>
+                            <li
+                                class="li-categoria"
+                                onclick="filtrar('vehiculos')"
+                            >
+                                -> Vehículos
+                            </li>
+                            <li
+                                class="li-categoria"
+                                onclick="filtrar('inmuebles')"
+                            >
+                                -> Inmuebles
+                            </li>
+                            <li
+                                class="li-categoria"
+                                onclick="filtrar('servicios')"
+                            >
+                                -> Servicios
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="../vender.html" class="nav-link"
+                            >Vender</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="../sucursales.html"
+                            class="nav-link"
+                            >Sucursales</a
+                        >
+                    </li>
+                    <li>
+                        <a href="../contacto.html" class="nav-link"
+                            >Contacto</a
+                        >
+                    </li>
+
+                    <li>
+                        <a href="" class="nav-link">Iniciar sesión</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="box-msj">
+                <span
+                    >Para vender productos completa el siguiente
+                    formulario...</span
+                >
+            </div>
+            <div>
+                <fieldset>
+                    <legend>PRODUCTOS</legend>
+                    <form action="" method="POST">
+                        <div class="div-form-left">
+                            <div>
+                                <label for=""> Nombre de usuario: </label>
+                                <input type="text" required />
+                            </div>
+                            <hr />
+                            <div>
+                                <label for="">Producto:</label>
+                                <input
+                                    type="text"
+                                    placeholder="Ej:Notebook Dell 3410"
+                                    required
+                                />
+                            </div>
+                            <br />
+                            <div>
+                                <label for="">Categoría:</label>
+                                <input
+                                    type="text"
+                                    placeholder="Ej: informática"
+                                    required
+                                />
+                            </div>
+                            <br />
+                            <div class="box-estado">
+                                <span>Estado:</span>
+                                <div>
+                                    <input
+                                        name="si"
+                                        type="radio"
+                                        id=""
+                                        value="no"
+                                        checked
+                                    />
+                                    <label for="">nuevo</label>
+                                    <br />
+                                    <input
+                                        name="si"
+                                        type="radio"
+                                        id=""
+                                        value="no"
+                                    />
+                                    <label for="">usado</label>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="div-unidades-peso">
+                                <div>
+                                    <label for="">Unidades:</label>
+                                    <input
+                                        type="number"
+                                        placeholder="Ej: 2"
+                                        min="1"
+                                        step="1"
+                                        required
+                                    />
+                                </div>
+
+                                <div>
+                                    <label for="">Peso unitario:</label>
+                                    <input
+                                        type="number"
+                                        placeholder="Ej: 4.5"
+                                        min="0"
+                                        step="0.001"
+                                        required
+                                    />
+                                    <label for="">kg</label>
+                                </div>
+                            </div>
+
+                            <br />
+                            <div>
+                                <label for=""
+                                    >Alguna descripción (opcional):</label
+                                >
+                                <br />
+                                <textarea
+                                    name="textarea"
+                                    rows="5"
+                                    cols="50"
+                                    placeholder="Ej: Las notebooks tienen 2 meses de uso. Sirven para diseño gráfico y edición de videos..."
+                                ></textarea>
+                            </div>
+                            <br />
+                            <div>
+                                <label for="">Precio (ARS): $</label>
+                                <input
+                                    type="number"
+                                    min="1"
+                                    step="0.01"
+                                    required
+                                />
+                            </div>
+                        </div>
+
+                        <div class="div-form-right">
+                            <label for="upload"
+                                >Haga clic en esta área para subir las fotos de
+                                su producto...</label
+                            >
+                            <div>
+                                <input
+                                    class="control"
+                                    type="file"
+                                    name=""
+                                    id="upload"
+                                    accept=".jpg,.png"
+                                    multiple
+                                    required
+                                />
+                            </div>
+
+                            <span>Ten en cuenta:</span>
+                            <ul class="ul-nota">
+                                <li>
+                                    -> Las fotos deben tener extensión ".jpg" o
+                                    ".png".
+                                </li>
+                                <li>-> Toma fotos desde diferentes ángulos.</li>
+                                <li>-> Asegúrate que salgan nítidas.</li>
+                            </ul>
+                        </div>
+                        <div class="div-form-bottom">
+                            <div class="div-botones-form">
+                                <input type="submit" value="ENVIAR" />
+                                <input type="reset" value="RESETEAR" />
+                            </div>
+                        </div>
+                    </form>
+                </fieldset>
+            </div>
+        </main>
+        <footer>
+            <div class="icon-container">
+                <!--Instagram-->
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-brand-instagram"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                        d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"
+                    ></path>
+                    <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                    <path d="M16.5 7.5l0 .01"></path>
+                </svg>
+                <p1>freemarket.arg </p1>
+                <!--Twitter-->
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-brand-twitter"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                        d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z"
+                    ></path>
+                </svg>
+                <p1>freemarket.arg </p1>
+                <!--Facebook-->
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-brand-facebook"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                        d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"
+                    ></path>
+                </svg>
+                <p1>FreeMarket Argentina </p1>
+                <!--Gmail-->
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-mail"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                        d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"
+                    ></path>
+                    <path d="M3 7l9 6l9 -6"></path>
+                </svg>
+                <p1>freemarket.arg@gmail.com </p1>
+            </div>
+            <div class="icon-container">
+                <!--Copyright-->
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-copyright"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                    <path
+                        d="M14 9.75a3.016 3.016 0 0 0 -4.163 .173a2.993 2.993 0 0 0 0 4.154a3.016 3.016 0 0 0 4.163 .173"
+                    ></path>
+                </svg>
+                <p1>2023 <b>FreeMarket</b>. Todos los derechos reservados.</p1>
+            </div>
+            <div class="icon-container">
+                <p1>Diseñado por Belén Fornari y Axel Aguirre</p1>
+            </div>
+        </footer>
+    </body>
+    <script type="text/javascript" src="/assets/js/categorias.js"></script>
+</html>

@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap");
+
+* {
+    font-family: "Signika", sans-serif;
+
+    --nav-footer: #f68354;
+    --button: #f89c6c;
+    --init-text: #fbb583;
+    --background: #fdce9b;
+    --form: #ffe7b2;
+}
+
+body,
+header,
+main,
+footer {
+    margin: 0;
+    padding: 0;
+    height: max-content;
+}
+
+header {
+    background-color: var(--background);
+}
+
+main {
+    background-color: var(--background);
+}
+
+footer {
+    background-color: var(--nav-footer);
+}
+
+.container {
+    background-color: darkslategrey;
+
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-columns: auto;
+    grid-template-rows: max-content;
+}
+
+header {
+    grid-area: header;
+}
+main {
+    grid-area: main;
+}
+footer {
+    grid-area: footer;
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    /* border: 3px solid green; */
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: space-between;
+}
+
+.navegador {
+    display: flex;
+    opacity: 0.7;
+    border-radius: 3px;
+    height: 100%;
+    width: 100%;
+    align-items: flex-start;
+    text-align: center;
+}
+
+ul {
+    border-radius: 20px;
+    background-color: var(--nav-footer);
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    position: relative;
+    background-color: var(--button);
+    border-radius: 20px;
+}
+
+li:hover {
+    background-color: var(--init-text);
+    cursor: pointer;
+}
+
+a {
+    vertical-align: middle;
+    text-decoration: none;
+    align-items: center;
+    color: black;
+}
+.nav-link {
+    color: black;
+    font-size: 20px;
+    padding: 8px 20px;
+}
+
+.nav-link:focus {
+    color: red;
+}
+
+#navegador ul ul {
+    display: none;
+    position: absolute;
+    top: 90%;
+    left: 0;
+    background: var(--button);
+    padding: 0;
+    border-radius: 20px;
+}
+
+/* items del menu desplegable */
+#navegador ul ul li {
+    float: none;
+    width: 150px;
+    z-index: 1;
+    color: black;
+    font-size: 16px;
+    /* padding: 8px 0px; */
+}
+
+.li-inicio {
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    font-weight: bolder;
+    padding: 0px 8px;
+}
+
+.li-inicio img {
+    vertical-align: middle;
+}
+
+/* enlaces de los items del menu desplegable */
+
+.li-categoria {
+    padding: 10px 15px;
+    width: 150px;
+    text-align: center;
+    background-color: var(--button);
+}
+
+/* items del menu desplegable al pasar el ratón */
+/* #navegador ul li{
+    transition: width 500ms ease-out 50ms;
+} */
+
+#li-nav-categorias:hover {
+    padding: 0px 30px 0px 0px;
+    width: 150px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    z-index: 1;
+    /* border: 2px solid red; */
+}
+
+#navegador ul li:hover > ul {
+    display: block;
+}
+
+.box-msj {
+    /* border: 1px solid blue; */
+    background-color: var(--init-text);
+    height: 3rem;
+    font-size: 23px;
+    padding: 0.5rem 0.5rem;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+/* Estilo adicional para el título y subtitulo */
+h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 30px;
+}
+/* Estilo para las sucursales */
+p {
+    background-color: var(--background);
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+/* Estilo para los horarios de atención */
+#left-column p {
+    font-size: 20px;
+    margin-left: 0px;
+    font-weight: 16px;
+    position: relative;
+}
+/* Estilo para los iframes de Google Maps */
+iframe {
+    margin-top: 10px;
+    width: 98%;
+    height: 200px;
+    background-color: #f3e8db;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#left-column:first-child {
+    margin-right: 10px;
+}
+#right-column:last-child {
+    border-left: 1px solid rgb(143, 141, 141);
+    margin-left: 0px;
+}
+
+/*pie de página*/
+.icon-container {
+    padding-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px; /* margen entre los renglones */
+}
+
+.icon-container svg {
+    width: 24px;
+    height: 24px;
+    margin: 0 5px; /* margen entre los iconos */
+}

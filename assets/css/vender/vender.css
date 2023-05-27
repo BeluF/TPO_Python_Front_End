@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap");
+
+* {
+    font-family: "Signika", sans-serif;
+
+    --nav-footer: #f68354;
+    --button: #f89c6c;
+    --init-text: #fbb583;
+    --background: #fdce9b;
+    --form: #ffe7b2;
+}
+
+body,
+header,
+main,
+footer {
+    margin: 0;
+    padding: 0;
+    height: max-content;
+}
+
+header {
+    background-color: var(--background);
+}
+
+main {
+    background-color: var(--background);
+}
+
+footer {
+    background-color: var(--nav-footer);
+}
+
+.container {
+    background-color: darkslategrey;
+
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-columns: auto;
+    grid-template-rows: max-content;
+    height: 100%;
+}
+
+header {
+    grid-area: header;
+}
+main {
+    min-height: 75vh; /* Altura mínima igual al tamaño de la ventana del navegador */
+    grid-area: main;
+}
+footer {
+    grid-area: footer;
+}
+
+.items {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: space-between;
+    padding-top: 3rem;
+}
+
+.navegador {
+    display: flex;
+    opacity: 0.7;
+    border-radius: 3px;
+    height: 100%;
+    width: 100%;
+    align-items: flex-start;
+    text-align: center;
+}
+
+ul {
+    border-radius: 20px;
+    background-color: var(--nav-footer);
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    position: relative;
+    background-color: var(--button);
+    border-radius: 20px;
+}
+
+li:hover {
+    background-color: var(--init-text);
+    cursor: pointer;
+}
+
+a {
+    vertical-align: middle;
+    text-decoration: none;
+    align-items: center;
+    color: black;
+}
+
+.nav-link {
+    color: black;
+    font-size: 20px;
+    padding: 8px 20px;
+}
+
+.nav-link:focus {
+    color: red;
+}
+
+#navegador ul ul {
+    display: none;
+    position: absolute;
+    top: 90%;
+    left: 0;
+    background: var(--button);
+    padding: 0;
+    border-radius: 20px;
+}
+
+/* items del menu desplegable */
+#navegador ul ul li {
+    float: none;
+    width: 150px;
+    z-index: 1;
+    color: black;
+    font-size: 16px;
+    /* padding: 8px 0px; */
+}
+
+.li-inicio {
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    font-weight: bolder;
+    padding: 0px 8px;
+}
+
+.li-inicio img {
+    vertical-align: middle;
+}
+
+/* enlaces de los items del menu desplegable */
+
+.li-categoria {
+    padding: 10px 15px;
+    width: 150px;
+    text-align: center;
+    background-color: var(--button);
+}
+
+/* items del menu desplegable al pasar el ratón */
+/* #navegador ul li{
+    transition: width 500ms ease-out 50ms;
+} */
+
+#li-nav-categorias:hover {
+    padding: 0px 30px 0px 0px;
+    width: 150px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    z-index: 1;
+    /* border: 2px solid red; */
+}
+
+#navegador ul li:hover > ul {
+    display: block;
+}
+
+.box-msj {
+    /* border: 1px solid blue; */
+    background-color: var(--init-text);
+    height: 15vh;
+    font-size: 30px;
+    padding: 2rem 5rem;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.box-item {
+    display: flex;
+    background-color: white;
+    width: 176px;
+    height: 176px;
+    border: none;
+    border-radius: 20px;
+    transition: box-shadow, widht, height, 200ms ease-out 5ms;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.box-item:hover {
+    width: 190px;
+    height: 190px;
+    box-shadow: 0px 0px 15px 3px var(--button);
+}
+
+.box-item > img {
+    padding-top: 1rem;
+    width: 100%;
+    height: 100%;
+    transition: transform 200ms ease-out 5ms;
+}
+
+.box-item > img:hover {
+    transform: scale(1.4);
+}
+
+.box-categoria {
+    text-align: center;
+}
+
+.item-text {
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.box-img {
+    justify-content: center;
+    align-items: center;
+}
+
+/*pie de página*/
+.icon-container {
+    padding-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px; /* margen entre los renglones */
+}
+
+.icon-container svg {
+    width: 24px;
+    height: 24px;
+    margin: 0 5px; /* margen entre los iconos */
+}
